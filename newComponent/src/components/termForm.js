@@ -17,12 +17,11 @@ class TermForm extends Component{
    	this.setState({definition:e.target.value});
    }
    _onSubmit(e){
+   	console.log(e);
     this.setState({isSubmitted:true});
     this.props.submitFun(this.state.title,this.state.definition);
    }
 	render() {
-		console.log(this.state.title);
-    	console.log(this.state.definition);
     return (
    <form>
      Term Title<br/>
