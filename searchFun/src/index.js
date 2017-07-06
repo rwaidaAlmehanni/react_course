@@ -18,7 +18,6 @@ class App extends Component{
 	  }
 	render(){
 		let items=this.state.data;
-		console.log("hkhkjhjk")
 		if(this.state.filter){//test if there is new state call filter ...
 			items=items.filter(item => item.name.toLowerCase().includes(this.state.filter.toLowerCase())) //will create array of data that like the input ...  
 		}
