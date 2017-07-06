@@ -1,0 +1,15 @@
+Lifecycle Methods:
+
+1- componentWillMount:built_in function will call before the first render
+
+2- componentDidMount :will call after the first render
+
+3- componentWillReceiveProps : will call when the props value are changes and befor the next render.
+
+4- shouldComponentUpdate : by defulte it return (True) that let the component be render but if we don't want that we can change it to false by adding if statment
+
+5- componentWillUpdate : will call befor every render
+
+6- componentDidUpdate : will call after every render
+
+7- componentWillUnmount : will call when the component stop working (after the last render)  
