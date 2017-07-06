@@ -1,0 +1,31 @@
+steps to add css-loader & style-loader:
+
+    we should install 2 loaders to use our css file :
+    
+    A)css-loader : this one to let the js file see css file.
+    B)style-loader : this one to let the DOM see css file.
+
+1- npm install --save-dev css-loader style-loader //to add loaders to package.json
+
+2- create css file inside src folder 
+
+3-import this file to our component file like:
+
+import styles from './fileName.css';
+
+4- add config to our webpack.config.js like:
+var config={
+	
+	//our code
+
+	module:{
+	loaders:[
+             {
+               test: /\.css/,
+               loaders: ['style', 'css'],
+               include:APP_DIR
+        }
+	  ]
+	}
+}
+## that's it :)
