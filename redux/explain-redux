@@ -1,0 +1,47 @@
+1) what is Redux?
+Redux is a concept of data storing and communcation in the client-side, it's like DB in the Client-side that help you to do queries like: select , update , delete in to JSON's DB.
+
+2) before we start with redux we should know that:
+we have 2 kinds of functions:
+
+  a)pure functions: which return value just depending on the arguments and it never overwright the main value.
+
+  b)Impure functions: which can deal with DB in the back-end and it can overwright the main value .
+
+  redux use pure function that mean in every time it create new state depending on action and prev state for that it also call (single state tree). 
+
+3) Reducer: it is a function that take prev state & action (object should has 'type' key and the value should be string) to return new state .
+
+ex:
+const counter(state=0,action){
+	switch(action.type){
+	case 'INCREMENT':
+	     return state+1;
+	case 'DECREMENT':
+	     return state-1;
+	default:
+	     return state;
+	}
+}
+
+let start with start redux:
+
+-install redux:
+ npm install --save react-redux
+
+- create DB:
+ const { CreateStore} = Redux;
+
+-create DB from reducer(function that will generate states):
+ const store=CreateState(reducer-name);
+
+-functions that we can use:
+ store.getState();  => give the curent state.
+ store.dispatch({type:'INCREMENT'}); => call the reducer
+ store.subscribe(render); => it render the view depending on the states 
+
+  we can imagine it like:
+
+                 Action => Reducer => Store => View
+
+
